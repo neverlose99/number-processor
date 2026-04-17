@@ -23,4 +23,27 @@ public class NumberProcessorTest {
         int result = NumberProcessor.processNumbers(arr);
         assertEquals(0, result);
     }
+
+    // ===== Issue #2 bổ sung =====
+
+    @Test
+    public void testNegativeSum() {
+        int[] arr = {1, 3};
+        int result = NumberProcessor.processNumbers(arr);
+        assertEquals(-1, result);
+    }
+
+    @Test
+    public void testSingleEven() {
+        int[] arr = {2};
+        int result = NumberProcessor.processNumbers(arr);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void testSingleOdd() {
+        int[] arr = {1};
+        int result = NumberProcessor.processNumbers(arr);
+        assertEquals(-1, result);
+    }
 }
